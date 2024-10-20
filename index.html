@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário De Cadastro</title>
+</head>
+<body>
+    <form name="signup" onsubmit="alert('Enviei o formulario')" autocomplete="off" target="_self" method="get" action="#">
+        Nome: <input type="text" name="name"/><br>
+        Idade: <input type="number" name="age"/><br>
+        Senha: <input type="password" name="password"/>
+        <button type="submit">Enviar</button>
+    </form>
+
+   <H2>Tag <i>'Form'</i> e seus atributos</H2>
+
+    <div>
+       <h3>Tag 'Form"</h3>
+        <p> A tag <i>'form'</i> Cria uma área onde certos inputs serão enviados juntos, ela também necessária para o funcionamento da tag button.</p>
+    </div>
+
+    <div>
+        <h3>Method</h3>
+        <p> O método <i>'get'</i> envia as informações pelo URL, o que o torna não-seguro para o envio de senhar.</p>
+        <p> Já o método <i>'post'</i> envia uma requisição, tornando-o apropriado para senhas.</p>
+    </div>
+
+    <div>
+        <h3>Target</h3>
+        <p> O target <i>'_blank'</i> envia as informações para uma nova página.</p>
+        <p> Enquanto o método <i>'_self'</i> modifica a própia página.</p>
+        <p>A ideia do target é modificar se a informação trafega em outra página ou não.</p>
+    </div>
+
+    <div>
+        <h3>Autocomplete</h3>
+        <p> O autocomplete <i>'off'</i> desabilita a autocompletação que é armazenda pelo navegador.</p>
+        <p> Já o autocomplete <i>'on'</i> guarda a informação digitada no campo quando sair e voltar á pagina.</p>
+    </div>
+
+    <div>
+        <h3>Prefixo 'ON'</h3>
+        <p> O prefixo <i>'on'</i> funciona como um comando de eventos ligado ao JavaScript.</p>
+        <ul><li><i><h4>Onsubmit</h4></i></li>
+        <p> O evento <i>'onsubmit'</i> funciona quando algo é enviado, ou seja, nesse caso quando o botão é clicado, ele ativa o evento 'alert' (JS). Esse recurso pode ser usado para validação de formulários entre outros.</p></ul>
+        <ul><li><i><h4>Onclick</h4></i></li>
+            <p> O evento <i>'onclick'</i> funciona identificando quando algo é clicado.</p></ul>
+    </div>
+
+    <h2>Tag <i>'Input'</i> e seus <u>tipos</u> e <u>atributos</u></h2>
+
+    <div>
+        <h3>Tag 'input'</h3>
+        <p> A tag <i>'input'</i> abre uma caixa para a inserção de informações como letras e números, podendo ter diversos tipos e atributos.</p>
+    </div>
+
+    <div>
+        <h3>Text</h3>
+        <p> O input <i>'text'</i> permite a inserção de letras e números dentro da caixa de texto.</p>
+        <label>Digite Aqui:</label><input type="text"/>
+    </div>
+
+    <div>
+        <h3>Number</h3>
+        <p> O input <i>'number</i> permite somente a inserção de números dentro da caixa de texto, adicionando também, por padrão, setas ao lado da caixa para a escolha dos números.</p>
+        <label>Digite Aqui:</label><input type="number"/>
+        <ul><li><i><h4>Atributo 'min'</h4></i></li>
+        <p> Observe que na caixa de texto acima o número pode ser negativo, isso não é muito bom quando a contagem deve ser de números naturais, como idades, para isso, o <strong>atributo <i>'min'</i></strong> funciona definindo um limite mínimo para a contagem, como 0 por exemplo.</p>
+        <label>Digite Aqui:</label><input type="number" min="0"/> 
+
+        <li><i><h4>Atributo 'max'</h4></i></li>
+        <p> Da mesma forma o <strong>atributo <i>'max'</i></strong> define um limite máximo para a contagem, como 10 por exemplo.</p>
+        <p> Podendo os dois atributos serem combinados também.</p>
+        <label>Digite Aqui:</label><input type="number" min="0" max="10"/>
+
+        <li><i><h4>Atributo 'step'</h4></i></li>
+        <p> Naturalmente o contador progride acontagem de 1 em 1, isso pode ser modificado através do <strong>atributo <i>'step'</i></strong> o qual define uma progressão para o campo numérico, por exemplo 5.</p>
+        <p> Podendo os dois atributos serem combinados também.</p>
+        <label>Digite Aqui:</label><input type="number" min="0" max="37" step="5"/>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Password</h3>
+        <p> O input <i>'password'</i> permite a mesma inserção de textos que o 'text' porém eles são escondidos por caracteres para que seja seguro a inserção de senhas.</p>
+        <label>Digite Aqui:</label><input type="password"/>
+    </div>
+
+    <div>
+        <h3>Button</h3>
+        <p> O input <i>'button'</i> cria um botão virtual que pode ser clicado para diversas funções.</p>
+        <p> Diversos atributos podem ser aplicados como o 'value' para dar um nome ao botão.</p>
+        <label>Tag Input:</label><input type="button" value="Enviar"/>
+        <p> Existe também uma tag própia chamada button que poderá ser abordada mais tarde. Semânticamente falando, é melhor usar a tag própia do que o 'input button', abaixo está a tag button para comparação.</p>
+        <label>Tag button:</label><button>Enviar</button>
+    </div>
+
+    <div>
+        <h3>Range</h3>
+        <p> O input <i>'Range'</i> cria um campo scroll, muito útil em diversos casos.</p>
+        <label> Range:</label><input type="range"/>
+        <ul>
+            <li><i><h4>Atributos 'min', 'max' e 'value'</h4></i></li>
+            <p> Os atributos 'min' e 'max' também podem ser utilizados aqui. Embora não sejam aparentes, o mínimo e o máximo estão definidos como 0 e 100</p>
+            <p>Vale ressaltar o uso do atributo <i>'value'</i>, este define a posição inicial da barra, definindo um valor inicial a ela. Nesse caso o <i>value</i> é de 20.</p>
+            <label>Range:</label><input type="range" value="20" min="0" max="100">
+
+            <li><i><h4>Atributo 'Step'</h4></i></li>
+            <p> Esse atributo também pode ser utilizado aqui, seu uso é interessante pois parece criar "marcos" ao longo da barra facilitando seu uso em certas ocasiões, já que naturalmente a contagem é feita de 1 em 1, deixando o movimento bastante suave.</p>
+            <p>Aqui o <i>step</i> está definido como 25, e o <i>máximo</i> como 100, dessa forma, há 4 posições possíveis para que a bolinha seja colocada ao longo da barra.</p>
+            <label>Range:</label><input type="range" step="25" value="20" min="0" max="100">
+        </ul>
+
+        <div>
+            <h3>Color</h3>
+            <p> O input <i>'color'</i> permite a criação de um campo para a escolha de cores, o qual está a mercê do tipo de janela exibida por cada navegador.</p>
+            <label>Color:</label><input type="color"/>
+        </div>
+
+        <div>
+         <form>
+            <h3>Email</h3>
+            <p> O input <i>'email'</i> exibe uma caixa de texto com a finalidade de inserção de emails, com isso essa caixa <u>exige</u> que o caractere <strong>@</strong> esteja presente.</p>
+            <p>Esse é um campo muito padrão do navegador, e geralmente é substiuído por outros tipos, por questões de problemas de compatibilidade e etc.</p>
+            <label>E-mail:</label><input type="email" autocomplete="off"/>
+            <input type="submit"/>
+         </form>
+        </div>
+
+        <div>
+         <form>
+            <h3>URL</h3>
+            <p> O input <i>'url'</i> exibe uma caixa de texto com a finalidade de inserção de url, dessa forma, a caixa <u>exige</u> que esteja presente <strong>https://</strong> dentro do campo.</p>
+            <label>URL:</label><input type="url"/>
+            <input type="submit"/>
+         </form>
+        </div>
+
+        <div>
+            <h3>Date</h3>
+            <p> O input <i>'date'</i> permite a criação de um campo para a escolha de datas, o qual está a mercê da linguagem escolhida no navegados para a exibição da ordem dos dia, mês e ano, e do navegador escolhido para o tipo de janela que será exibida.</p>
+            <label>Escolha a data:</label><input type="date"/>
+        </div>
+
+        <div>
+            <h3>Week</h3>
+            <p> O input <i>'week'</i> é bem diferente, pois permite a escolha de uma semana do ano, o qual novamente está a mercê do navegador escolhido para o tipo de janela que será exibida.</p>
+            <p><strong style="color: brown; font-size: 15px;">ATENÇÃO</strong> esse <i>input</i> é tão pouco utilizado que ele sequer funciona no firefox</p>
+            <label>Escolha a semana:</label><input type="week"/>
+        </div>
+
+        <div>
+            <h3>Month</h3>
+            <p> O input <i>'month'</i> é o mesmo caso do anterior e permite a escolha de um mês do ano.</p>
+            <p><strong style="color: brown; font-size: 15px;">ATENÇÃO</strong> esse <i>input</i> também sequer funciona no firefox</p>
+            <label>Escolha o mês:</label><input type="month"/>
+        </div>
+
+        <div>
+            <h3>Hidden</h3>
+            <p> O input <i>'hidden'</i> cria uma caixa escondida para o usuário que envia informações "por debaixo dos panos".</p>
+            <label>Hidden:</label><input type="hidden"/>
+        </div>
+
+        <div>
+            <h3>File</h3>
+            <p> O input <i>'file'</i> cria um campo para enviar arquivos.</p>
+            <label>File:</label><input type="file"/>
+            <ul>
+                <li><i><h4>Atributo 'multiple'</h4></i></li>
+                <p> O atributo <i>'multiple'</i> permite que a escolha de arquivos seja multipla, simples assim.</p>
+                <label>Multiple Files:</label><input type="file" multiple/>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Search</h3>
+            <p> O input <i>'search'</i> cria uma caixa de busca que permite a inserção de textos normalmente, seu diferencial é que ele permite que o texto seja todo apagado através de um botão, muito útil em diversos casos.</p>
+            <p><strong style="color: brown; font-size: 15px;">ATENÇÃO</strong> esse <i>input</i> infelizmente só funciona no chrome, sendo necessário a criação de um campo personalizado para outros navegadores</p>
+            <label>Search:</label><input type="search"/>
+        </div>
+
+        <div>
+            <form method="post" target="_blank">
+            <h3>Checkbox</h3>
+            <p> O input <i>'checkbox'</i> cria uma caixa de seleção de múltipla escolha, ou seja, várias podem ser escolhidas ao mesmo tempo.</p>
+            <label>Checkbox 1:</label>
+            <input type="checkbox" name="um"/> 
+            <input type="checkbox" name="um"/> 
+            <input type="checkbox" name="um"/>
+            <ul>
+                <li><i><h4>Atributo 'name'</h4></i></li>
+                <p> O atributo <i>'name'</i> permite que os itens sejam "agrupados", dessa forma, permitindo que a funcionalidade de <u>múltipla</u> escolha funcione dentro de uma categoria e em diferentes categorias ao mesmo tempo.</p>
+                <label>Checkbox 1:</label>
+                <input type="checkbox" name="um[]"/> 
+                <input type="checkbox" name="um[]"/> 
+                <input type="checkbox" name="um[]"/> <br>
+
+                <label>Checkbox 2:</label>
+                <input type="checkbox" name="dois[]"/> 
+                <input type="checkbox" name="dois[]"/> 
+                <input type="checkbox" name="dois[]"/> <br>
+                <p><strong style="color: brown; font-size: 15px;">ATENÇÃO</strong> para que esse <i>atributo</i> seja entendido como uma lista pelo servidor back-end é necessário que colchetes "[]" sejam adicionados ao final do nome e o formulário enviado pelo método <i>'post'</i>.</p>
+                <li><i><h4>Atributo 'value'</h4></i></li>
+                <p> O atributo <i>'value'</i> permite que os itens sejam "identificados", dessa forma, selecionando qual informação será enviada para o servidor. Nesse caso, cada caixa selecionada irá enviar um valor igual ao seu nome.</p>
+                <label>Checkbox 3 - Valor 1:</label>
+                <input type="checkbox" name="tres[]" value="1"/><br>
+                <label>Checkbox 3 - Valor 2:</label> 
+                <input type="checkbox" name="tres[]" value="2"/><br>
+                <label>Checkbox 3 - Valor 3:</label> 
+                <input type="checkbox" name="tres[]" value="3"/> <br>
+                <li><i><h4>Atributo 'disabled'</h4></i></li>
+                <p> O atributo <i>'disabled'</i> permite que as caixas de seleção sejam <u> desabilitas</u>.</p>
+                <label>Checkbox 4:</label> 
+                <input type="checkbox" name="cuatro[]" value="1" disabled/> 
+                <input type="checkbox" name="cuatro[]" value="2" disabled/>
+                <input type="checkbox" name="cuatro[]" value="3" disabled/>  
+            </form>
+            </ul>
+        </div>
+
+        <div>
+            <form method="post" target="_blank">
+            <h3>Radio</h3>
+            <p> O input <i>'radio'</i> cria uma caixa de seleção de única escolha desde que tenham o mesmo nome, ou seja, desde que pertençam ao mesmo grupo.</p>
+            <label>Radio 1:</label>
+            <input type="Radio" name="unico[]"/> 
+            <input type="Radio" name="unico[]"/> 
+            <input type="Radio" name="unico[]"/>
+            <ul>
+                <li><i><h4>Atributo 'name'</h4></i></li>
+                <p> O atributo <i>'name'</i> permite que os itens sejam "agrupados", dessa forma, permitindo que a funcionalidade de <u>única</u> escolha funcione dentro de uma categoria e em diferentes categorias ao mesmo tempo.</p>
+                <label>Radio 1:</label>
+                <input type="Radio" name="unico[]" value="1"/> 
+                <input type="Radio" name="unico[]" value="2"/> 
+                <input type="Radio" name="unico[]" value="3"/> <br>
+                <label>Radio 2:</label>
+                <input type="Radio" name="dois[]" value="1"/> 
+                <input type="Radio" name="dois[]" value="2"/> 
+                <input type="Radio" name="dois[]" value="3"/> <br>
+                
+                <li><i><h4>Atributo 'value'</h4></i></li>
+                <p> O atributo <i>'value'</i> permite que os itens sejam "identificados", dessa forma, selecionando qual informação será enviada para o servidor. Nesse caso, cada caixa selecionada irá enviar um valor igual ao seu nome. Ou seja, ou será 1, ou será 2 ou então sera 3.</p>
+                <label>Radio 3 - Valor 1:</label>
+                <input type="radio" name="tres[]" value="1"/><br>
+                <label>Radio 3 - Valor 2:</label> 
+                <input type="radio" name="tres[]" value="2"/><br>
+                <label>Radio 3 - Valor 3:</label> 
+                <input type="radio" name="tres[]" value="3"/> <br>
+
+                <li><i><h4>Atributo 'disabled'</h4></i></li>
+                <p> O atributo <i>'disabled'</i> permite que as caixas de seleção sejam <u> desabilitas</u>.</p>
+                <label>Checkbox 4:</label> 
+                <input type="radio" name="cuatro[]" value="1" disabled/> 
+                <input type="radio" name="cuatro[]" value="2" disabled/>
+                <input type="radio" name="cuatro[]" value="3" disabled/>
+            </ul>
+        </form>
+        </div>
+    </div>
+
+    <div>
+    <h2>Tag <i>'br'</i></h2>
+        <h3>Tag 'br'</h3>
+    <p> A tag <i>'br'</i> faz uma quebra de linha e é geralmente utilizada no fim de uma linha. A exemplo < br > <br> a tag foi usada aqui para fazer a quebra, no código esse texto é contínuo, e na web ele aparece como uma quebra de linha.</p>
+    </div>
+
+    <H2>Tag <i>'Button'</i> e seus Tipos</H2>
+    <div>
+        <h3>Tag 'button'</h3>
+        <p> A tag <i>'button'</i> cria uma caixa clicável para diversas finalidades. Ele possui 4 tipos diferentes acessáveis através do atributo 'type' e é altamente customizável através do JS.</p>
+    </div>
+
+    <div>
+        <h3>Button</h3>
+        <p> O atributo <i>'button'</i> simplesmente cria um botão e nada mais, ele somente ganhará uma função através do JavaScript.</p>
+        <button type="button" onclick="alert('Eu cliquei aqui')">Clique em mim</button> <br> <br>
+        <button type="button" onmouseover="alert('Eu passei aqui')">Passe em mim</button>
+    </div>
+
+    <div>
+        <form>
+        <h3>Reset</h3>
+        <p> O atributo <i>'reset'</i> limpa os campos do formulário no qual ele está dentro.</p>
+        <input type="text">
+        <button type="reset"> Reset </button>
+    </form>
+    </div>
+
+    <div>
+        <form method="get" target="_blank" onsubmit="alert('Enviado!')" action="#">
+            <h3>Submit</h3>
+            <p> O atributo <i>'submit'</i> envia as informações dos campos do formulário no qual ele está dentro. É um atributo ligado ao JS através do evento 'OnSubmit'</p>
+            <p> Esse atributo também identifica quando a tecla <i>enter</i> do teclado é pressionada, e age como se o botão fosse clicado com o mouse.</p>
+            <p><strong style="color: brown; font-size: 15px;">ATENÇÃO</strong> É muito importante fazer a validação no <i>back-end</i> também não somente no front-end, porque muitas vezes o front-end pode ser manipulado através do console do navegador.</p>
+        <input type="text">
+        <button type="submit"> Submit </button>
+    </form>
+    </div>
+
+    <H2>Tag <i>'Select'</i> e seus Tipos</H2>
+    <div>
+        <h3>Tag 'select'</h3>
+        <p> A tag <i>'select'</i>  cria uma caixa de seleção com diferentes opções para escolha</p>   
+        <label>Comidas</label>
+        <select name="comidas"><option>Selecione a comida</option></select> 
+    </div>
+
+    <div>   
+        <i><h3>Tag filha 'option'</h3></i>
+        <p> A tag filha <i>'option'</i> permite a criação da lista com diferentes itens dentro da tag <i>'select'</i>.</p>
+       <label>Comidas</label>
+        <select name="comidas">
+            <option selected value="">Selecione a comida</option>
+            <option value="Lasanha">Lasanha</option>
+            <option value="Strongonoff">Strongonoff</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Sushi">Sushi</option>
+        </select>
+
+        <ul><li><i><h4>Atributo Multiple</h4></i></li>
+            <p>Esse atributo é aplicado à Tag 'select' e permite que várias opções sejam selecionadas usando a tecla "ctrl" ou "Shift" do teclado</p>
+            <select name="comidas" multiple>
+                <option selected value="">Selecione a comida</option>
+                <option value="Lasanha">Lasanha</option>
+                <option value="Strongonoff">Strongonoff</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Sushi">Sushi</option>
+            </select>
+    </ul>
+    </div>
+
+    <H2>Tag <i>'Textarea'</i></H2>
+    <div>
+        <h3>Tag 'Textarea'</h3>
+        <p> A tag <i>'textarea'</i>  cria uma caixa de texto com mais de uma linhae área redimensionável, é a tag ideal para campos a serem preenchidos com informações mais complexas, pois não limita o usuário e torna a escrita mais intuitiva</p>   
+        <label>Escreva Aqui</label>
+        <textarea name="message">Mensagem</textarea> 
+
+        <ul><li><i><h4>Atributo Rows</h4></i></li>
+        <p>Esse atributo define a quantidade de <u>linhas</u> padrão do campo de texto:</p>
+        <label>Escreva aqui</label>
+        <textarea name="message" rows="1">1 linha por padrão</textarea> <br>
+        <label>Escreva aqui</label>
+        <textarea name="message" rows="4">4 linhas por padrão</textarea> 
+
+        li><i><h4>Atributo Cols</h4></i></li>
+        <p>Esse atributo define a quantidade de <u>colunas</u> padrão do campo de texto:</p>
+        <label>Escreva aqui</label>
+        <textarea name="message" rows="1" cols="35">1 linhas e 35 colunas por padrão</textarea> <br>
+        <label>Escreva aqui</label>
+        <textarea name="message" rows="4" cols="10">4 linhas e 10 colunas por padrão</textarea> 
+        </ul>
+    </div>
+
+</body>
+</html>
